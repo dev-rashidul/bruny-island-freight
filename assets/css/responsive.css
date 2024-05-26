@@ -16,13 +16,8 @@
 /* Min Width 300px and Max Width 768px */
 
 @media (min-width: 300px) and (max-width: 768px) {
-  .mobile-navbar {
-    padding: 30px 20px;
-  }
-
   .mobile__nav {
-    padding: 30px 20px;
-    margin-top: 20px;
+    padding: 30px 30px 0 20px;
   }
 
   .mm__buttons .primary-btn a {

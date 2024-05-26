@@ -96,6 +96,21 @@ img {
   background: var(--secondary);
 }
 
+h2.section__title {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 100%;
+  color: var(--secondary);
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--gary);
+  margin-bottom: 0;
+}
+
 /* Base Style CSS End */
 
 /* Header Part CSS Start */
@@ -116,9 +131,8 @@ nav.navbar {
   top: 0;
   left: 0;
   right: 0;
-  background: var(--white);
+  background: var(--secondary);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  padding: 20px 0;
   z-index: 999;
   -webkit-animation: sticky 1.2s;
   animation: sticky 1.2s;
@@ -140,9 +154,9 @@ nav.navbar {
 .nav-link,
 .nav-link:focus {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: capitalize;
-  color: var(--secondary);
+  color: var(--white);
   padding: 14px 15px !important;
   transition: all 0.3s ease-in-out;
 }
@@ -156,7 +170,7 @@ li.active .nav-link {
 }
 
 .navbar.sticky .nav-link {
-  color: var(--black);
+  color: var(--white);
 }
 
 .nav-link:hover {
@@ -164,13 +178,17 @@ li.active .nav-link {
 }
 
 .call-btn a {
-  color: var(--white) !important;
-  background: var(--primary);
+  color: var(--secondary) !important;
+  background: var(--white);
   margin-left: 40px;
 }
 
 .call-btn a:hover {
   color: var(--white) !important;
+}
+
+.navbar.sticky .call-btn a:hover {
+  background: var(--primary) !important;
 }
 
 @media (max-width: 992px) {
@@ -186,11 +204,12 @@ li.active .nav-link {
   .mobile-navbar {
     position: fixed;
     width: 100%;
-    padding: 30px 50px 20px;
+    padding: 0 25px 0 20px;
     background: var(--white);
   }
 
   .mobile-navbar.sticky {
+    padding: 0 20px !important;
     background: var(--white);
   }
 
@@ -316,4 +335,153 @@ li.active .nav-link {
 
 /* Navigation Section CSS End */
 
+/* Hero Section CSS Start */
+
+.hero__wrapper {
+  background: url(../images/hero-bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 150px 0 210px;
+}
+
+.hero__container {
+  padding: 0 150px;
+}
+
+.hero__content h1 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.hero__content p {
+  font-size: 18px;
+  color: var(--white);
+  line-height: 110%;
+}
+
+/* Hero Section CSS End */
+
 /* Header Part CSS End */
+
+/* Main Part CSS Start */
+
+/* Product Section CSS Start */
+
+.product__wrapper {
+  margin-top: -110px;
+}
+
+.product__card {
+  position: relative;
+  background: var(--secondary);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.product__card-tag {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.product__card-tag span {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--primary);
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.magenta .product__card-tag span {
+  background: #854085;
+}
+
+.dark-orange .product__card-tag span {
+  background: #8e6545;
+}
+
+.product__card-content h2 {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--white);
+  padding-top: 35px;
+}
+
+.product__card-content h3 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 100%;
+  color: var(--white);
+  padding-bottom: 25px;
+}
+
+.magenta .book__btn {
+  background: #854085;
+}
+
+.blue .book__btn {
+  background: #4b71a6;
+}
+
+.dark-orange .book__btn {
+  background: #8e6545;
+}
+
+.book__btn {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--primary);
+  padding: 16px 30px !important;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.book__btn:hover {
+  color: var(--secondary);
+  background: var(--white);
+}
+
+.product__card-content p {
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 110%;
+  color: var(--white);
+  padding-top: 30px;
+  margin-bottom: 0;
+}
+
+/* Product Section CSS End */
+
+/* Who Section CSS Start */
+
+.who__wrapper {
+  padding: 80px 0;
+}
+
+.who__content h2 {
+  margin-bottom: 20px;
+}
+
+.who__content-buttons {
+  padding-top: 50px;
+}
+
+.email a {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+  text-decoration-line: underline;
+  color: var(--primary);
+}
+
+/* Who Section CSS End */
+
+/* Main Part CSS End */
