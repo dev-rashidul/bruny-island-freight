@@ -12,38 +12,46 @@
 
 @font-face {
   font-family: Mazzard;
-  src: url(../font/MazzardM-Thin.otf);
+  src: url(../fonts/MazzardM-Thin.otf);
   font-weight: 200;
 }
 
 @font-face {
   font-family: Mazzard;
-  src: url(../font/MazzardM-Light.otf);
+  src: url(../fonts/MazzardM-Light.otf);
   font-weight: 300;
 }
 
 @font-face {
   font-family: Mazzard;
-  src: url(../font/MazzardM-Regular.otf);
+  src: url(../fonts/MazzardM-Regular.otf);
   font-weight: 400;
 }
 
 @font-face {
   font-family: Mazzard;
-  src: url(../font/MazzardM-Medium.otf);
+  src: url(../fonts/MazzardM-Medium.otf);
   font-weight: 500;
 }
 
 @font-face {
   font-family: Mazzard;
-  src: url(../font/MazzardM-SemiBold.otf);
+  src: url(../fonts/MazzardM-SemiBold.otf);
   font-weight: 600;
 }
 
 @font-face {
   font-family: Mazzard;
-  src: url(../font/MazzardM-Bold.otf);
+  src: url(../fonts/MazzardM-Bold.otf);
   font-weight: 700;
+}
+
+/* Gilroy Font */
+
+@font-face {
+  font-family: Gilroy;
+  src: url(../fonts/Gilroy-Regular.ttf);
+  font-weight: 400;
 }
 
 body {
@@ -109,6 +117,12 @@ p {
   line-height: 150%;
   color: var(--gary);
   margin-bottom: 0;
+}
+
+#Who,
+#About,
+#Track {
+  scroll-margin-top: 5vh;
 }
 
 /* Base Style CSS End */
@@ -222,6 +236,7 @@ li.active .nav-link {
     padding: 50px;
     background: var(--white);
     transition: left 0.3s ease-in-out;
+    z-index: 999;
   }
 
   .mobile__nav.active {
@@ -454,7 +469,7 @@ li.active .nav-link {
   font-weight: 200;
   line-height: 110%;
   color: var(--white);
-  padding-top: 30px;
+  padding: 30px 0 10px;
   margin-bottom: 0;
 }
 
@@ -480,8 +495,343 @@ li.active .nav-link {
   line-height: 100%;
   text-decoration-line: underline;
   color: var(--primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.email a:hover {
+  color: var(--secondary);
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding-left: 100px;
+}
+
+.stats-card {
+  text-align: center;
+}
+
+.stats-card h2 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--primary);
+}
+
+.stats-card p {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gary);
+  margin-bottom: 0;
 }
 
 /* Who Section CSS End */
 
+/* Track Section CSS Start */
+
+.track__wrapper {
+  background: var(--primary);
+  padding: 60px 0;
+}
+
+.track__content h2 {
+  color: var(--white);
+}
+
+.track__content p {
+  color: var(--white);
+  padding: 10px 0 30px;
+}
+
+.tracking__form__container {
+  max-width: 520px;
+}
+
+.tracking__form {
+  display: flex;
+  align-items: end;
+}
+
+.tracking__filed {
+  width: 100%;
+}
+
+.tracking__filed label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.tracking__filed input {
+  width: 100%;
+  padding: 13px 20px;
+  margin-top: 5px;
+  border: 1px solid var(--black);
+}
+
+.tracking__filed input:focus {
+  outline: 0;
+}
+
+.tracking__form ::placeholder {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.tracking__submit__btn input {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--secondary);
+  padding: 15px 40px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.tracking__submit__btn input:hover {
+  color: var(--black);
+  background: var(--white);
+}
+
+.tracking-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Track Section CSS End */
+
+/* About Section CSS Start */
+
+.about__wrapper {
+  padding: 80px 0;
+}
+
+.accordion-item {
+  border-bottom: 2px solid var(--black);
+}
+
+.accordion-button {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 90%;
+  color: var(--secondary);
+  padding: 30px 0;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  background-image: url(../images/chevron-down-icon.svg);
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primary);
+  background: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url(../images/chevron-up-icon.svg);
+  transform: none;
+}
+
+.accordion-body {
+  padding: 0;
+  padding-bottom: 40px;
+}
+
+.accordion-body p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--gary);
+}
+
+/* About Section CSS End */
+
+/* Pack and Track Delivery Section CSS Start */
+
+.pack__track__wrapper {
+  padding: 80px 0;
+}
+
+.pack__track__title {
+  padding-bottom: 20px;
+}
+
+.pack__track__card {
+  padding-top: 30px;
+}
+
+.pack__track__card-number span {
+  display: block;
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--primary);
+  padding-right: 30px;
+  margin-top: -18px;
+}
+
+.pack__track__card-content h3 {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 90%;
+  color: var(--secondary);
+}
+
+/* Pack and Track Delivery Section CSS End */
+
+/* Green Promise Section CSS Start */
+
+.green__promise__wrapper {
+  background: rgba(217, 217, 217, 0.25);
+  padding: 80px 0;
+}
+
+.green__promise__title {
+  padding-bottom: 50px;
+}
+
+.green__promise__content {
+  height: 100%;
+  background: var(--primary);
+  padding: 60px 40px 40px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.green__promise__content h3 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 90%;
+  color: var(--white);
+}
+
+.green__promise__content p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #9ad3c5;
+  padding: 20px 0 50px;
+}
+
+.green__promise-btn a {
+  color: var(--secondary);
+  background: var(--white);
+}
+
+.green__promise__img img {
+  width: 100%;
+}
+
+/* Green Promise Section CSS End */
+
+/* Faq Section CSS Start */
+
+.faq__wrapper {
+  padding: 80px 0;
+}
+
+.faq__content {
+  padding-right: 120px;
+}
+
+.faq__accordion .accordion-body {
+  padding: 0 10px 30px;
+}
+
+.faq__accordion .accordion-button {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 90%;
+  color: var(--secondary);
+  padding: 30px 10px;
+}
+
+.faq__accordion .accordion-button:not(.collapsed) {
+  color: var(--primary);
+  background: none;
+}
+
+/* Faq Section CSS End */
+
+/* Bruny Islan Freight Image */
+
+.bruny__island__img img {
+  width: 100%;
+}
+
 /* Main Part CSS End */
+
+/* Footer Part CSS Start */
+
+.footer__wrapper {
+  background: var(--primary);
+  padding: 60px 0;
+}
+
+.footer__about {
+  max-width: 392px;
+}
+
+.footer__about h2 {
+  color: var(--white);
+}
+
+.footer__about p {
+  color: var(--white);
+  padding: 10px 0 40px;
+}
+
+.footer__call-btn a {
+  color: var(--black);
+  background: var(--white);
+  padding: 16px 60px !important;
+}
+
+.footer__menu {
+  padding-top: 80px;
+}
+
+.footer__links {
+  padding-top: 30px;
+}
+
+.footer__links ul li {
+  padding: 6px 0;
+}
+
+.footer__links ul li a {
+  font-family: Gilroy;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  text-decoration-line: underline;
+  color: var(--white);
+}
+
+.footer__copyright p {
+  font-family: Gilroy;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.1px;
+  color: var(--white);
+}
+
+.footer__social ul li {
+  padding-left: 30px;
+}
+
+.footer__social ul li a i {
+  font-size: 20px;
+  color: var(--white);
+}
+
+/* Footer Part CSS End */

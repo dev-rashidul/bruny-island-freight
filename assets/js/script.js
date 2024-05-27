@@ -9,7 +9,7 @@ window.addEventListener("scroll", function () {
 function toggleActiveClass() {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(
-    ".navbar-nav .nav-item .nav-link, .footer__nav li a"
+    ".navbar-nav .nav-item .nav-link, .footer__links li a"
   );
 
   sections.forEach((section) => {
@@ -35,7 +35,7 @@ function toggleActiveClass() {
 
 // Add click event listeners to all menu links
 document
-  .querySelectorAll(".navbar-nav .nav-item .nav-link, .footer__nav li a")
+  .querySelectorAll(".navbar-nav .nav-item .nav-link, .footer__links li a")
   .forEach((link) => {
     link.addEventListener("click", function (event) {
       event.preventDefault();
