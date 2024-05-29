@@ -90,8 +90,6 @@ $('.owl-carousel').owlCarousel({
   margin:15,
   nav: false,
   stagePadding: 50,
-  autoplay: true,
-  autoplayTimeout: 3000,
   responsive:{
       0:{
           items:1,

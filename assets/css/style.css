@@ -147,6 +147,7 @@ nav.navbar {
   right: 0;
   background: var(--secondary);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
   z-index: 999;
   -webkit-animation: sticky 1.2s;
   animation: sticky 1.2s;
@@ -154,6 +155,15 @@ nav.navbar {
 
 .mobile-navbar.sticky {
   padding: 30px 20px;
+}
+
+.navbar.sticky .logo,
+.white__logo {
+  display: none;
+}
+
+.navbar.sticky .white__logo {
+  display: block;
 }
 
 @keyframes sticky {
@@ -191,7 +201,8 @@ li.active .nav-link {
   color: var(--primary) !important;
 }
 
-.call-btn a {
+.call-btn a,
+.call-btn a:visited {
   color: var(--secondary) !important;
   background: var(--white);
   margin-left: 40px;
@@ -199,9 +210,11 @@ li.active .nav-link {
 
 .call-btn a:hover {
   color: var(--white) !important;
+  background: var(--secondary);
 }
 
 .navbar.sticky .call-btn a:hover {
+  color: var(--white) !important;
   background: var(--primary) !important;
 }
 
@@ -218,12 +231,12 @@ li.active .nav-link {
   .mobile-navbar {
     position: fixed;
     width: 100%;
-    padding: 0 25px 0 20px;
+    padding: 10px 25px 10px 20px;
     background: var(--white);
   }
 
   .mobile-navbar.sticky {
-    padding: 0 20px !important;
+    padding: 10px 20px !important;
     background: var(--white);
   }
 
@@ -555,7 +568,7 @@ li.active .nav-link {
 }
 
 .tracking__filed {
-  width: 100%;
+  width: 60%;
 }
 
 .tracking__filed label {
@@ -585,19 +598,20 @@ li.active .nav-link {
   color: var(--black);
 }
 
-.tracking__submit__btn input {
+.tracking__submit__btn a {
+  display: flex;
   font-size: 15px;
   font-weight: 700;
   color: var(--white);
   background: var(--secondary);
-  padding: 15px 40px;
+  padding: 15px 30px;
   margin-left: 20px;
   border: none;
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
 }
 
-.tracking__submit__btn input:hover {
+.tracking__submit__btn a:hover {
   color: var(--black);
   background: var(--white);
 }
@@ -617,7 +631,9 @@ li.active .nav-link {
 }
 
 .accordion-item {
+  border: none;
   border-bottom: 2px solid var(--black);
+  border-radius: 0 !important;
 }
 
 .accordion-button {
@@ -745,7 +761,8 @@ li.active .nav-link {
   margin-top: -18px;
 }
 
-.pack__track__card-content h3 {
+.pack__track__card-content h3,
+.pack__track__card-content a {
   font-size: 35px;
   font-weight: 500;
   line-height: 90%;
@@ -820,6 +837,14 @@ li.active .nav-link {
   padding: 30px 10px;
 }
 
+.accordion-button {
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-button:hover {
+  color: var(--primary);
+}
+
 .faq__accordion .accordion-button:not(.collapsed) {
   color: var(--primary);
   background: none;
@@ -855,10 +880,20 @@ li.active .nav-link {
   padding: 10px 0 40px;
 }
 
-.footer__call-btn a {
+.footer__call-btn a,
+.footer__call-btn a:focus {
+  font-size: 15px;
+  font-weight: 700;
   color: var(--black);
   background: var(--white);
   padding: 16px 60px !important;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__call-btn a:hover {
+  color: var(--white);
+  background: var(--black);
 }
 
 .footer__menu {
@@ -873,7 +908,8 @@ li.active .nav-link {
   padding: 6px 0;
 }
 
-.footer__links ul li a {
+.footer__links ul li a,
+.footer__links ul a {
   font-family: Gilroy;
   font-size: 17px;
   font-weight: 400;
@@ -903,6 +939,10 @@ li.active .nav-link {
 .footer__social ul li a i {
   font-size: 20px;
   color: var(--white);
+}
+
+embed {
+  height: 100vh;
 }
 
 /* Footer Part CSS End */
