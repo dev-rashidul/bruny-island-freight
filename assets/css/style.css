@@ -575,6 +575,10 @@ li.active .nav-link {
   outline: 0;
 }
 
+.tracking__form input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
 .tracking__form ::placeholder {
   font-size: 15px;
   font-weight: 600;
@@ -655,6 +659,68 @@ li.active .nav-link {
 }
 
 /* About Section CSS End */
+
+/* Services Section CSS Start */
+
+.services__wrapper {
+  background: #f5f5f5;
+  padding: 80px 0;
+}
+
+.services__slider {
+  padding-top: 40px;
+}
+
+.service__card {
+  padding: 35px;
+  background: var(--white);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.service__card h3 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 90%;
+  color: var(--primary);
+  padding: 25px 0 10px;
+}
+
+.service__card p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primary);
+  margin-bottom: 0;
+}
+
+.owl-stage {
+  display: flex;
+  padding-bottom: 50px;
+  padding-left: 0px !important;
+}
+
+.owl-stage img {
+  max-width: initial;
+}
+
+.owl-item {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.owl-carousel .owl-item img {
+  width: initial;
+}
+
+.owl-dots .owl-dot span {
+  background: #7a7a7a !important;
+}
+
+.owl-dots .owl-dot.active span {
+  background: var(--primary) !important;
+}
+
+/* Services Section CSS End */
 
 /* Pack and Track Delivery Section CSS Start */
 
@@ -814,6 +880,11 @@ li.active .nav-link {
   letter-spacing: -0.2px;
   text-decoration-line: underline;
   color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__links ul li a:hover {
+  color: var(--secondary);
 }
 
 .footer__copyright p {

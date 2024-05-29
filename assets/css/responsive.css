@@ -122,6 +122,10 @@
     padding-bottom: 50px;
   }
 
+  .service__card {
+    padding: 20px;
+  }
+
   .footer__menu {
     padding-top: 0;
   }
