@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Service Slider JavaScript
 
 $('.owl-carousel').owlCarousel({
-  loop:true,
+  loop:false,
   margin:15,
   nav: false,
   stagePadding: 50,
