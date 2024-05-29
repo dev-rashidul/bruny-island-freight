@@ -99,13 +99,18 @@
     align-items: start;
   }
 
+  .tracking__filed {
+    width: 100%;
+  }
+
   .tracking__submit__btn {
     width: 100%;
   }
 
-  .tracking__submit__btn input {
+  .tracking__submit__btn a {
     display: block;
     width: 100%;
+    text-align: center;
     margin-top: 20px;
     margin-left: 0;
   }
@@ -128,5 +133,14 @@
 
   .footer__menu {
     padding-top: 0;
+  }
+
+  .footer__social {
+    padding-top: 30px;
+  }
+
+  .footer__social ul li {
+    padding-left: 0;
+    padding-right: 25px;
   }
 }

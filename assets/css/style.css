@@ -202,7 +202,7 @@ li.active .nav-link {
 }
 
 .call-btn a,
-.call-btn a:visited {
+.call-btn a:focus {
   color: var(--secondary) !important;
   background: var(--white);
   margin-left: 40px;
@@ -233,11 +233,13 @@ li.active .nav-link {
     width: 100%;
     padding: 10px 25px 10px 20px;
     background: var(--white);
+    z-index: 999;
   }
 
   .mobile-navbar.sticky {
     padding: 10px 20px !important;
     background: var(--white);
+    z-index: 999;
   }
 
   .mobile__nav {
@@ -769,6 +771,11 @@ li.active .nav-link {
   color: var(--secondary);
 }
 
+.pack__track__card-content a {
+  display: block;
+  padding-bottom: 15px;
+}
+
 /* Pack and Track Delivery Section CSS End */
 
 /* Green Promise Section CSS Start */
@@ -919,7 +926,8 @@ li.active .nav-link {
   transition: all 0.3s ease-in-out;
 }
 
-.footer__links ul li a:hover {
+.footer__links ul li a:hover,
+.footer__links ul a:hover {
   color: var(--secondary);
 }
 
