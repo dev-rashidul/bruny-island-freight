@@ -271,7 +271,6 @@ li.active .nav-link {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "Playfair Display";
     font-size: 18px;
     font-weight: 700;
     color: var(--black);
@@ -413,6 +412,7 @@ li.active .nav-link {
 }
 
 .product__card-tag {
+  width: 100%;
   position: absolute;
   top: -12px;
   left: 50%;
@@ -424,7 +424,7 @@ li.active .nav-link {
   font-weight: 600;
   color: var(--white);
   background: var(--primary);
-  padding: 10px 15px;
+  padding: 10px 16px;
   border-radius: 4px;
 }
 
