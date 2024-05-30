@@ -428,6 +428,10 @@ li.active .nav-link {
   border-radius: 4px;
 }
 
+.blue .product__card-tag span {
+  background: #4b71a6;
+}
+
 .magenta .product__card-tag span {
   background: #854085;
 }
